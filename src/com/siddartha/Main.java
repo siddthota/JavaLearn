@@ -35,6 +35,27 @@ public class Main {
                     " : " + movie.getName() + "\n" +
                     "Plot: " + movie.plot() + "\n");
         }
+
+        //OOPS concepts - Override, Inheritence, Polymorphism, Encapsulation
+
+        Hamburger hamburger = new Hamburger("Basic", 3.66, "Chicken", "Wheat");
+        double price = hamburger.totalPriceofHamburger();
+        hamburger.addHamburgerAddition1("Lettuce", 0.25);
+        hamburger.addHamburgerAddition2("Cheese", 1.22);
+        hamburger.addHamburgerAddition3("Eggs", 2.10);
+        System.out.println("Total burger price " + hamburger.totalPriceofHamburger());
+
+        HealthyBurger healthyBurger = new HealthyBurger(6.21, "Salmon");
+
+        healthyBurger.addHamburgerAddition3("Eggs", 2.10);
+        healthyBurger.addHealthAddition1("Artichoke", 1.11);
+        healthyBurger.addHealthAddition2("Olives", 0.65);
+
+        System.out.println("Total Healthy Burger price " + healthyBurger.totalPriceofHamburger());
+
+        ComboBurger comboBurger = new ComboBurger();
+        System.out.println("Total Combo Burger price " + comboBurger.totalPriceofHamburger());
+
     }
 
     public static double calcFeetAndInchesToCentimeters(int feet, int inches) {
@@ -84,6 +105,7 @@ public class Main {
 
         return null;
     }
+
 }
 
 class Movie {
